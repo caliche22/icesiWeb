@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import UserForm from '../components/UserForm';
 import Formulario from '../components/Formulario';
 import NavBar from '../components/NavBar';
