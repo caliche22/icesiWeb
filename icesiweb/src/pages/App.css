@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan:100,200,300,400,500,600,700,800,900&display=swap');
+
+.App {
+  text-align: center;
+  background-color: #7962f8;
+  background-image: url('../img/fondos/Fondo.png');
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-family: 'Spartan';
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.Registro-Fondo{
+  height: 100vh;
+  background-color: #7962f8;
+  background-image: url('../img/fondos/Fondo.png');
+  
+}
+
+.Texto-Blanco{
+  background-color: white;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.Columna-Registro{
+  height: 100vh;
+  width: 40%;
+  float: right;
+  background-color: #131a40;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.MuiAppBar-colorPrimary {
+  background-color: #3f51b500 !important;
+}
+
+.Boton-Google{
+  background-image: url('../img/iconos/Boton_Google.png');
+}
+
+.Logo{
+  height: 20px;
+  width: 115px;
+  margin-left: 30px;
+}
+.Button-Logo{
+  background-image: url('../img/iconos/logo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  height: 120% !important;
+  width: 110% !important;
+  border-radius: 0px !important;
+}
+
+.Texto-Inicio{
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.NavBar{
+  overflow: hidden;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+}
+
+.Button-Menu{
+  font-family: 'Spartan'!important;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+  margin-top: 20px !important;
+  float: right;
+}
+
+.Button-Primary-Outlined{
+  border-radius: 20px !important;
+  border-color: #eb5757 !important;
+  color: #eb5757 !important;
+  text-transform: none !important;
+  font-family: 'Spartan' !important;
+}
+
+.Button-Primary{
+  border-radius: 20px !important;
+  background-color: #eb5757 !important;
+  text-transform: none !important;
+  font-family: 'Spartan' !important;
+  font-weight: 700 !important;
+}
+
+.Button-Primary-Form{
+  border-radius: 20px !important;
+  background-color: #eb5757 !important;
+  text-transform: none !important;
+  font-family: 'Spartan' !important;
+  font-weight: 700 !important;
+  margin-top: 15px !important;
+  width: 100% !important;
+}
+
+.Button-Default{
+  color: white !important;
+  text-transform: none !important;
+  font-family: 'Spartan' !important;
+}
+
+.Button-Blanco{
+  background-image: url('../img/iconos/Boton_Google.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-transform: none !important;
+  font-family: 'Spartan' !important;
+  width: 300px;
+  height: 50px;
+  border-radius: 30px !important;
+}
+
+.Text-Left{
+  text-align: left;
+}
+
+.Toolbar-Header{
+  margin-left:5px;
+  width:100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-link {
+  color: #61dafb;
+}

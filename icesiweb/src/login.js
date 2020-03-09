@@ -5,6 +5,8 @@ import 'firebase/auth';
 import firebaseConfig from './firebase';
 import Button from '@material-ui/core/Button';
 
+import './pages/App.css';
+
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 class login extends Component {
@@ -16,11 +18,12 @@ class login extends Component {
                     user ?
                     <p>Hello, {user.displayName}</p>
                     :
-                    <p>Please, sign in</p>
+                    <p></p>
                 }
                 {
-                    user ?<Button variant="contained" color="primary" onClick={signOut}>Sign out </Button>
-                    :<Button variant="contained" color="primary" onClick={signInWithGoogle}>Sign in with Google</Button>
+                    user ?<Button className = "Button-Primary" variant="contained" color="primary" onClick={signOut}>Sign out </Button>
+                    :
+                    <Button className = "Button-Blanco" variant="contained" color="primary"  onClick={signInWithGoogle}></Button>
                 }
             </div>
         );
