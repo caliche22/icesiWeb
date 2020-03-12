@@ -5,7 +5,7 @@ import 'firebase/auth';
 import firebaseConfig from './firebase';
 import Button from '@material-ui/core/Button';
 
-import './pages/App.css';
+import './App.css';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 

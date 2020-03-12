@@ -1,26 +1,27 @@
 import React from 'react';
-import Formulario from '../components/FormularioRegistro';
+import FormularioInicio from '../components/FormularioInicio';
 import NavBarSimple from '../components/NavBarSimple';
 import Login from '../login';
 
 import '../App.css';
 //
 //import { UserForm } from '../../components/UserForm';
-function Registro() {
+function Inicio() {
   return (
   <div>
     <NavBarSimple/>
-      <div className="Registro-Fondo">
-        <div className = "Columna-Registro">
+      <div className="Inicio-Fondo">
+        <div className = "Columna-Inicio">
           <div>
             <Login/>
-            <h4 className = "Texto-Inicio">O crea una cuenta</h4>
-            <Formulario/>
+              <h4 className = "Texto-Inicio">O inicia sesión con tu usuario</h4>
+            <FormularioInicio/>
           </div>
         </div>
       </div>
   </div>
   );
+
 }
 
-export default Registro;
+export default Inicio;

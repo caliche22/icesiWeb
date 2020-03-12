@@ -9,18 +9,24 @@ const NavBar = () => {
     <div className="NavBar">
       <AppBar position="static">
         <ToolBar>
-          <div className = "Logo">
-            <Button className = "Button-Logo"></Button>
-          </div>
+          <Link to="./"> 
+            <div className = "Logo">
+              <Button className = "Button-Logo"></Button>
+            </div>
+          </Link>
           <div className = "Toolbar-Header">
-          <ul className="nav-links">
-          <Link to="../registro">
-          <li>Iniciar Sesion</li>
-          </Link>
-          <Link to="../login">
-          <li>Registro</li>
-          </Link>
-        </ul>
+            <ul className="nav-links">
+              <Link to="./registro">
+                <Button className = "Button-Primary-Outlined Button-Menu" variant="outlined" color="secondary">
+                    Regístrate
+                </Button>
+              </Link>
+              <Link to="./inicio">
+                <Button className = "Button-Default Button-Menu" color="default">
+                  Inicia Sesión
+                </Button>
+              </Link>
+            </ul>
           </div>
         </ToolBar>
       </AppBar>

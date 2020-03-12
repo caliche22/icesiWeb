@@ -3,7 +3,7 @@
 .App {
   text-align: center;
   background-color: #7962f8;
-  background-image: url('../img/fondos/Fondo.png');
+  background-image: url('./img/fondos/Fondo.png');
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,8 +18,15 @@
 
 .Registro-Fondo{
   height: 100vh;
-  background-color: #7962f8;
-  background-image: url('../img/fondos/Fondo.png');
+  background-image: url('./img/fondos/FondoRegistro.png');
+  background-size: cover;
+  
+}
+
+.Inicio-Fondo{
+  height: 100vh;
+  background-image: url('./img/fondos/FondoLogin.png');
+  background-size: cover;
   
 }
 
@@ -41,12 +48,22 @@
   display: flex;
 }
 
+.Columna-Inicio{
+  height: 100vh;
+  width: 40%;
+  float: right;
+  background-color: #eb5757;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
 .MuiAppBar-colorPrimary {
   background-color: #3f51b500 !important;
 }
 
 .Boton-Google{
-  background-image: url('../img/iconos/Boton_Google.png');
+  background-image: url('./img/iconos/Boton_Google.png');
 }
 
 .Logo{
@@ -55,7 +72,7 @@
   margin-left: 30px;
 }
 .Button-Logo{
-  background-image: url('../img/iconos/logo.png');
+  background-image: url('./img/iconos/logo.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -120,7 +137,7 @@
 }
 
 .Button-Blanco{
-  background-image: url('../img/iconos/Boton_Google.png');
+  background-image: url('./img/iconos/Boton_Google.png');
   background-size: cover;
   background-repeat: no-repeat;
   text-transform: none !important;
@@ -146,4 +163,8 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.MuiButton-outlined{
+  margin-bottom: 20px !important;
 }

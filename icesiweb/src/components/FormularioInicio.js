@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 
-import DetalleUsuario from './DetalleUsuario';
+import DetalleInicio from './DetalleInicio';
 
-import FormUserDetails from './FormUserDetails';
 
-export class Formulario extends Component{
+export class FormularioInicio extends Component{
   state ={
     step:1,
     email: '',
@@ -40,7 +39,7 @@ export class Formulario extends Component{
     switch(step){
       case 1: 
         return(
-          <DetalleUsuario
+          <DetalleInicio
             nextStep = {this.nextStep}
             handleChange = {this.handleChange}
             values = {values}
@@ -58,4 +57,4 @@ export class Formulario extends Component{
 }
 
 
-export default Formulario;
+export default FormularioInicio;

@@ -1,19 +1,27 @@
 import React from 'react';
 import Button from '@material-ui/core/Button'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import NavBar from '../components/NavBar';
-import Registro from './registro';
 
-import './App.css';
+import NavBar from './components/NavBar';
+
+import Registro from './pages/registro';
+import Inicio from './pages/inicio';
+
+import './App.css'
+
+
+
 //
 //import { UserForm } from '../../components/UserForm';
 function App() {
   return (
     <Router>
       <div>
-        <NavBar/>
-        <Route path="/" component = {Home}/>
-        <Route path = "/registro" component = {Registro}/>
+        <Switch>
+          <Route path="/" exact component = {Home}/>
+          <Route path = "/registro" exact component = {Registro}/>
+          <Route path = "/inicio" exact component = {Inicio}/>
+        </Switch>
       </div>
     </Router>
   );
