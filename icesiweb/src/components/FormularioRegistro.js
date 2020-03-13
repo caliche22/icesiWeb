@@ -1,60 +1,50 @@
 import React, {Component} from 'react';
+import Firebase from '../firebase'
+class FormularioRegistro extends Component{
 
-import DetalleUsuario from './DetalleUsuario';
-
-import FormUserDetails from './FormUserDetails';
-
-export class FormularioRegistro extends Component{
-  state ={
-    step:1,
-    email: '',
-    password: '',
-    name: '',
-    company: ''
+  login(){
+    const email=document.querySelector("#email").value;
+    const password=document.querySelector("#password").value;
+    Firebase.auth().signInWithEmailAndPassword(email,password).then((u)=>{
+      console.log("Inicio exitoso");
+    })
+    .catch((err)=>{
+      console.log("El error "+ err.toString());
+    })
   }
 
-
-  nextStep = () =>{
-    const { step } = this.state;
-    this.setState({
-      step: step + 1
-    });
+  signUp(){
+    const email=document.querySelector("#email").value;
+    const password=document.querySelector("#password").value;
+    Firebase.auth().createUserWithEmailAndPassword(email,password).then((u)=>{
+      console.log("Creacion exitoso");
+    })
+    .catch((err)=>{
+      console.log("El error "+ err.toString());
+    })
   }
 
-  previousStep = () =>{
-    const { step } = this.state;
-    this.setState({
-      step: step - 1
-    });
-  }
-
-  handleChange = input => e =>{
-    this.setState({ [input]: e.target.value });
-  }
 
   render(){
-    const {step} = this.state;
-    const {email, password, name, company} = this.state;
-    const values = {email, password, name, company};
+    return(
+      <div style={{textAlign:'center'}}>
+        <div>
+          <div>
+            <div>Email</div>
+            <input id="email" placeholder="Enter Email.." type="text"/>
+          </div>
+          <div>
+            <div>PassWord</div>
+            <input id="password" placeholder="Enter Password.." type="text"/>
+          </div>
+          <button style ={{margin:'10px'}} onClick={this.login}>Login</button>
+          <button style ={{margin:'10px'}} onClick={this.signUp}>Sign Up</button>
+        </div>
 
-    switch(step){
-      case 1: 
-        return(
-          <DetalleUsuario
-            nextStep = {this.nextStep}
-            handleChange = {this.handleChange}
-            values = {values}
-          />
-        );
-
-        case 2:
-          return <h1>Form Personal Details</h1>
-        case 3:
-          return <h1>Confirm</h1>
-        case 4:
-          return <h1>Sucess</h1>
-    }
+      </div>
+    )
   }
+
 }
 
 
