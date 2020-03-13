@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-import NavBar from './components/navbar';
+import NavBar from './components/NavBar';
 
 import Registro from './pages/registro';
 import Inicio from './pages/inicio';
