@@ -1,27 +1,55 @@
 import React from 'react';
-import FormularioInicio from '../components/FormularioInicio';
-import NavBarSimple from '../components/NavBarSimple';
-import Login from '../login';
+
+import NavBarSimple from '../components/navbarsimple';
+import GoogleLogin from '../components/googleLogin';
+import LoginForm from '../components/loginform';
+
+import firebaseConfig from '../config/firebaseConfig.js';
 
 import '../App.css';
-//
-//import { UserForm } from '../../components/UserForm';
-function Inicio() {
-  return (
-  <div>
-    <NavBarSimple/>
-      <div className="Inicio-Fondo">
-        <div className = "Columna-Inicio">
-          <div>
-            <Login/>
+
+class Inicio extends React.Component{
+
+  constructor(props){
+    super(props);
+        
+    this.state = {
+      user: null, 
+    }
+
+    this.authListener = this.authListener.bind(this);
+  }
+
+  componentDidMount(){
+    this.authListener();
+  }
+
+  authListener() {
+    firebaseConfig.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({user});
+      } else {
+        this.setState({user: null});
+        }
+      });
+  }
+
+  render() {
+    return (
+      <div>
+        <NavBarSimple/>
+        <div className="Inicio-Fondo">
+          <div className = "Columna-Inicio">
+            <div>
+            
               <h4 className = "Texto-Inicio">O inicia sesión con tu usuario</h4>
-            <FormularioInicio/>
+              <LoginForm/>
+            </div>
           </div>
         </div>
       </div>
-  </div>
-  );
-
+    );
+  }
 }
 
 export default Inicio;

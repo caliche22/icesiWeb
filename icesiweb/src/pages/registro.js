@@ -1,54 +1,60 @@
-import React, {Component} from 'react';
-import Formulario from '../components/FormularioRegistro';
-import NavBarSimple from '../components/NavBarSimple';
-import Login from '../login';
-import Firebase from '../firebase';
+import React from 'react';
 
-class Registro extends Component{
+import NavBarSimple from '../components/navbarsimple';
+import GoogleLogin from '../components/googleLogin';
+import RegisterForm from '../components/regform';
+
+import firebaseConfig from '../config/firebaseConfig.js';
+
+import '../App.css';
+
+class Registro extends React.Component{
 
   constructor(props){
     super(props);
-    this.state={
-      user:null,
+        
+    this.state = {
+      user: null, 
     }
-    this.authListener=this.authListener.bind(this);
 
+    this.authListener = this.authListener.bind(this);
   }
 
-
-  ComponentDiMount(){
+  componentDidMount(){
     this.authListener();
   }
 
-
-  authListener(){
-    Firebase.auth().onAuthStateChanged((user)=>{
-      if (user){
+  authListener() {
+    firebaseConfig.auth().onAuthStateChanged((user) => {
+      if (user) {
         this.setState({user});
-      }else{
-        this.setState({user:null });
-      }
-    })
+      } else {
+        this.setState({user: null});
+        }
+      });
   }
 
-  render(){
-  return (
-  <div>
-    <NavBarSimple/>
-      <div className="Registro-Fondo">
-        <div className = "Columna-Registro">
-          <div>
-            <Login/>
+  render() {
+    /* Pagina de registro, toca cambiar esto luego */
+    return(
+      <div>
+        <NavBarSimple/>
+        <div className="Registro-Fondo">
+          <div className = "Columna-Registro">
+            
             <h4 className = "Texto-Inicio">O crea una cuenta</h4>
-            <div>
-           <Formulario/>
-            </div>
+            <RegisterForm/>
           </div>
         </div>
       </div>
-  </div>
-  );
-}
+    );
+    /* toca modificar esto para que vaya a pagina de registro o pagina inicio
+    return (
+      <div className="App">
+        { this.state.user ? ( <Home/> ) : ( <Reg/> ) }
+      </div>
+    ); */
+  }
 }
 
 export default Registro;
