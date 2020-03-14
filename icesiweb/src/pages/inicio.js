@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavBarSimple from '../components/NavBarSimple';
+import NavBarSimple from '../components/navbarsimple';
 import GoogleLogin from '../components/googleLogin';
 import LoginForm from '../components/loginform';
 
@@ -41,6 +41,7 @@ class Inicio extends React.Component{
         <div className="Inicio-Fondo">
           <div className = "Columna-Inicio">
             <div>
+              <GoogleLogin/>
               <h4 className = "Texto-Inicio">O inicia sesión con tu usuario</h4>
               <LoginForm/>
             </div>

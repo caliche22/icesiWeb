@@ -12,7 +12,8 @@ class LoginForm extends React.Component{
       console.log("El error "+ err.toString());
     })
   }
-    
+   
+  /*ver si se puede borrar */
   signUp(){   
     const email=document.querySelector("#email").value;
     const password=document.querySelector("#password").value;
@@ -27,17 +28,19 @@ class LoginForm extends React.Component{
   render(){    
     return(
       <div style={{textAlign:'center'}}>
-        <div>
           <div>
             <div>Email</div>
               <input id="email" placeholder="Enter Email.." type="text"/>
             </div>
+
             <div>
               <div>PassWord</div>
               <input id="password" placeholder="Enter Password.." type="text"/>  
             </div>
+
             <button style ={{margin:'10px'}} onClick={this.login}>Login</button>
-        </div>
+            
+       
       </div>
     );
   }

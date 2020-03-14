@@ -1,11 +1,12 @@
 import React from 'react';
 
-import NavBarSimple from '../components/NavBarSimple';
+import NavBarSimple from '../components/navbarsimple';
 import RegisterForm from '../components/regform';
 
 import firebaseConfig from '../config/firebaseConfig.js';
 
 import '../App.css';
+import GoogleLogin from '../components/googleLogin';
 
 class Registro extends React.Component{
 
@@ -40,9 +41,11 @@ class Registro extends React.Component{
         <NavBarSimple/>
         <div className="Registro-Fondo">
           <div className = "Columna-Registro">
-            
-            <h4 className = "Texto-Inicio">O crea una cuenta</h4>
-            <RegisterForm/>
+          <div>
+              <GoogleLogin/>
+              <h4 className = "Texto-Inicio">O inicia sesión con tu usuario</h4>
+              <RegisterForm/>
+            </div>
           </div>
         </div>
       </div>
