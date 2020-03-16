@@ -16,6 +16,85 @@
   padding-right: 10%;
 }
 
+.Button-Form-Div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Caja-Texto{
+  height: 400px;
+  width: 700px;
+  background-color: #131a40;
+  border-radius: 50px;
+  padding: 80px 40px 80px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 35px rgba(23, 174, 191, 0.2);
+}
+
+.Form-Field-Text{
+  color: white;
+  font-family: 'Spartan';
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: small;
+}
+
+.Form-Field{
+  width: 92%;
+  margin-bottom: 20px;
+  height: 40px;
+  border-radius: 50px;
+  padding-left: 20px;
+  font-family: 'Spartan';
+  font-size: medium;
+  font-weight: 500;
+
+}
+
+.Form-Button {
+  width: 100%;
+  height: 50px;
+  font-family: 'Spartan';
+  font-size: medium;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+.Main-Button{
+  background-color: #eb5757;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #9a9a9a;
+  opacity: 1; /* Firefox */
+
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #9a9a9a;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #9a9a9a;
+}
+
+.RegDatos-Fondo{
+  height: 100vh;
+  background-image: url('./img/fondos/FondoDatos.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .Registro-Fondo{
   height: 100vh;
   background-image: url('./img/fondos/FondoRegistro.png');
@@ -30,7 +109,7 @@
   
 }
 
-.Texto-Blanco{
+.Campo-Texto-Blanco{
   background-color: white;
   border-radius: 30px;
   padding-left: 20px;
@@ -67,8 +146,8 @@
 }
 
 .Logo{
-  height: 20px;
-  width: 115px;
+  height: 23px;
+  width: 120px;
   margin-left: 30px;
 }
 .Button-Logo{
@@ -87,6 +166,13 @@
   text-align: center;
   margin-top: 60px;
   margin-bottom: 60px;
+}
+
+.Texto-Blanco{
+  color: white;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .NavBar{
@@ -120,14 +206,57 @@
   font-weight: 700 !important;
 }
 
+.Button-Primary-Form-Small{
+  border-radius: 50px !important;
+  background-color: #eb5757 !important;
+  text-transform: none !important;
+  font-family: 'Spartan' !important;
+  font-weight: 700 !important;
+  margin-top: 15px !important;
+  width: 40% !important;
+  color: white !important;
+  height: 50px;
+}
+
+.Button-Primary-Outlined-Small{
+  border-radius: 50px !important;
+  border: #eb5757;
+  text-transform: none !important;
+  font-family: 'Spartan' !important;
+  font-weight: 700 !important;
+  margin-top: 15px !important;
+  width: 40% !important;
+  color: #eb5757 !important;
+  height: 50px;
+}
+
+.Right{
+  float: right;
+}
+
+.Radio-Container{
+  width: 300px;
+}
+
+.Radio-Button-Div{
+  float: left;
+  width: 700px;
+}
+
 .Button-Primary-Form{
-  border-radius: 20px !important;
+  border-radius: 50px !important;
   background-color: #eb5757 !important;
   text-transform: none !important;
   font-family: 'Spartan' !important;
   font-weight: 700 !important;
   margin-top: 15px !important;
   width: 100% !important;
+  color: white !important;
+  height: 50px;
+}
+
+.Button-Blue{
+  background-color: #131a40 !important;
 }
 
 .Button-Default{
@@ -151,6 +280,10 @@
   text-align: left;
 }
 
+.Text-Center{
+  text-align: center;
+}
+
 .Toolbar-Header{
   margin-left:5px;
   width:100%;
@@ -167,4 +300,12 @@
 
 .MuiButton-outlined{
   margin-bottom: 20px !important;
+}
+
+.MuiRadio-colorSecondary{
+  color: #ffffff !important; 
+}
+
+.MuiRadio-colorSecondary.Mui-checked{
+  color: #eb5757 !important; 
 }

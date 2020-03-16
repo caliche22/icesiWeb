@@ -2,10 +2,11 @@ import React from 'react';
 import Button from '@material-ui/core/Button'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-import NavBar from './components/navbar';
+import NavBar from './components/NavBar';
 
 import Registro from './pages/registro';
 import Inicio from './pages/inicio';
+import RegistroDatos from './pages/registrodatos';
 
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" exact component = {Home}/>
           <Route path = "/registro" exact component = {Registro}/>
           <Route path = "/inicio" exact component = {Inicio}/>
+          <Route path = "/registrodatos" exact component = {RegistroDatos}/>
         </Switch>
       </div>
     </Router>

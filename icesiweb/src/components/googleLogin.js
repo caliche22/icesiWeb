@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+
 import withFirebaseAuth from 'react-with-firebase-auth';
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
-import firebaseConfig from '../config/firebaseConfig';
 import Button from '@material-ui/core/Button';
+
+import firebaseConfig from '../config/firebaseConfig';
 import '../App.css';
 
 class googleLogin extends Component {

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import NavBarSimple from '../components/navbarsimple';
-import GoogleLogin from '../components/googleLogin';
-import LoginForm from '../components/loginform';
+import NavBarSimple from '../components/NavBarSimple';
+import GoogleLogin from '../components/GoogleLogin';
+import LoginForm from '../components/LoginForm';
 
 import firebaseConfig from '../config/firebaseConfig.js';
 

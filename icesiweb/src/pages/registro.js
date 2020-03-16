@@ -1,12 +1,15 @@
 import React from 'react';
 
-import NavBarSimple from '../components/navbarsimple';
-import RegisterForm from '../components/regform';
+import NavBarSimple from '../components/NavBarSimple';
+import RegisterForm from '../components/RegisterForm';
+import GoogleLogin from '../components/GoogleLogin';
+
+import RegistroDatos from './registrodatos';
 
 import firebaseConfig from '../config/firebaseConfig.js';
 
 import '../App.css';
-import GoogleLogin from '../components/googleLogin';
+
 
 class Registro extends React.Component{
 
@@ -38,16 +41,21 @@ class Registro extends React.Component{
     /* Pagina de registro, toca cambiar esto luego */
     return(
       <div>
-        <NavBarSimple/>
-        <div className="Registro-Fondo">
-          <div className = "Columna-Registro">
+        {this.state.user ? 
+        (<RegistroDatos/>) : (
           <div>
-              <GoogleLogin/>
-              <h4 className = "Texto-Inicio">O inicia sesión con tu usuario</h4>
-              <RegisterForm/>
+            <NavBarSimple/>
+            <div className="Registro-Fondo">
+              <div className = "Columna-Registro">
+              <div>
+                  <GoogleLogin/>
+                  <h4 className = "Texto-Inicio">O regístrate con tu correo</h4>
+                  <RegisterForm/>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </div>)
+        }
       </div>
     );
     /* toca modificar esto para que vaya a pagina de registro o pagina inicio
