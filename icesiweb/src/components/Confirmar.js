@@ -19,11 +19,18 @@ export class Confirmar extends Component{
     this.props.prevStep();
   }
 
-  submit(uid){
-    const { values: {
-      name, enterprise, role
-    } } = this.props;
-    console.log("ASDFG", uid, name, role);
+  submit=(uid)=>{
+    db.collection('Users')
+    .add({
+      name:this.props.name,
+      role:this.props.role,
+      enterprise:this.props.enterprise
+    })
+
+    //const { values: {
+      //name, enterprise, role
+    //} } = this.props;
+    //console.log("ASDFG", uid, name, role);
 
     /*Escribir datos a la base de datos */
     /* ESTO ES LO QUE FALLA!!!!
