@@ -2,7 +2,7 @@ import React from 'react';
 
 import NavBarSimple from '../components/NavBarSimple';
 import RegisterForm from '../components/RegisterForm';
-import GoogleLogin from '../components/GoogleLogin';
+import GoogleLogin from '../components/googleLogin';
 
 import RegistroDatos from './registrodatos';
 

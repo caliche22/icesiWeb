@@ -65,7 +65,7 @@ export class Confirmar extends Component{
 
                 <Button className = "Button-Primary-Form-Small Right" 
                 style ={{margin:'10px'}} 
-                onClick={this.submit(userId)}>Siguiente</Button>
+                onClick={this.submit(userId)}>Confirmar</Button>
               </div>
             </div>
         </React.Fragment>
