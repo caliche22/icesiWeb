@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-
+import firebase from '../config/firebaseConfig';
 import 'firebase/auth';
 import firebaseConfig from '../config/firebaseConfig';
 
@@ -20,6 +20,7 @@ export class Confirmar extends Component{
   }
 
   submit=(uid)=>{
+    const db=firebase.firestore()
     db.collection('Users')
     .add({
       name:this.props.name,
